@@ -35,7 +35,7 @@
 						<nav id="nav">
 							<ul>
 								<li class="active"><a href="homepage.html">Homepage</a></li>
-								<li><a href="index.html">Browse News Sources</a></li>
+								<li><a href="sources">Browse News Sources</a></li>
 								<li><a href="enter_url.html">Check Specific Article</a></li>
 							</ul>
 						</nav>
@@ -47,7 +47,7 @@
 				<div id="page" class="container">
 						<section>
 							<header class="major">
-								<h2>FOX NEWS ARTICLES</h2>
+								<h2>{{news}} NEWS ARTICLES</h2>
 								<span class="byline">Article links with objectivity ratings on the side</span>
 							</header>
 							<p>
@@ -57,7 +57,11 @@
 								<li><a href="#">I hate communism now lemme tell you about Russia being good actually</a></li>
 								<li><a href="#">Bernie might be too old, but Donald Trump is definetly not</a></li>
 								<li><a href="#">Honestly if old people pivot in their beliefs, we pivot right with them.</a></li>
+              {% for article in news_articles %}
+                <li>{{article.obj_score}}</li>
+              {% endfor %}
 							</p>
+              
 						</section>
 					</div>
 				
