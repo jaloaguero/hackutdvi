@@ -51,13 +51,8 @@
 								<span class="byline">Article links with objectivity ratings on the side</span>
 							</header>
 							<p>
-							
-								<li><a href="#">Bernie Sanders is way too old</a></li>
-								<li><a href="#">Democrats are literally socialism</a></li>
-								<li><a href="#">I hate communism now lemme tell you about Russia being good actually</a></li>
-								<li><a href="#">Bernie might be too old, but Donald Trump is definetly not</a></li>
-								<li><a href="#">Honestly if old people pivot in their beliefs, we pivot right with them.</a></li>
               {% for article in news_articles %}
+								<li><a href="{{article['url']}}">{{article['title']}}</a></li>
                 <li>{{article.obj_score}}</li>
               {% endfor %}
 							</p>
