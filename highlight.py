@@ -10,15 +10,15 @@ article.parse()
 
 s = str(article.text)
 
-newstr = "mark {\n\tbackground: green;\n\tcolor: black:\n}\n<html>\n<header><title>Objectify</title></header>\n<body>\n"
+newstr = "mark {\n\tbackground: green;\n\tcolor: black;\n}\n<html>\n<header><title>Objectify</title></header>\n<body>\n"
 for word in s.split():
     if word in d and d[word] > 0.75:
         newstr += "<mark>"
         newstr += str(word)
-        newstr += "</mark>"
+        newstr += "</mark>" + " "
         # under 75 and in dictionary
     else:
-        newstr += str(word)
+        newstr += str(word) + " "
 
 newstr += "\n</body></html>"
 
