@@ -8,13 +8,15 @@ article = Article('https://cnn.com/2019/11/08/opinions/ok-boomer-callan-filipovi
 article.download()
 article.parse()
 
-print(article.text)
+s = str(article.text)
+
 newstr = "mark {\n\tbackground: green;\n\tcolor: black:\n}\n<html>\n<header><title>Objectify</title></header>\n<body>\n"
-for word in str(article.text).split:
-    if word in d and d[word] <= 0.75:
+for word in s.split():
+    if word in d and d[word] > 0.75:
         newstr += "<mark>"
         newstr += str(word)
         newstr += "</mark>"
+        # under 75 and in dictionary
     else:
         newstr += str(word)
 
