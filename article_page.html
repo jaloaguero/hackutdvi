@@ -51,9 +51,7 @@
 								<span class="byline">Article links with objectivity ratings on the side</span>
 							</header>
 							<p>
-              {% for article in news_articles %}
-								<li><a href="{{article['url']}}">{{article['title']}}</a></li>
-                <li>{{article.obj_score}}</li>
+              {% for article in news_articles %}<li> <a href="{{article['url']}}">{{article['title']}}</a> Objectivity Score: {{article.obj_score}}</li>
               {% endfor %}
 							</p>
               

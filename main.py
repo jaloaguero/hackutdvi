@@ -36,7 +36,9 @@ def article_list(news):
   news = news.upper()
   if news in known_news:
     news_articles = [article for article in articles.find({'source': news})]
-    return render_template('article_page.html', news=news, news_articles=news_articles)
+    return render_template('article_page.html',
+                           news=news,
+                           news_articles=news_articles)
   else:
     return '404'
 
