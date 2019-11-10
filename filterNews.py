@@ -8,7 +8,7 @@ def filter(url):
     article.download()
     article.parse()
     article.nlp()
-    print(article.title)
+    # print(article.title)
     avg = 0
     count = 0
     # print(article.text)
@@ -18,7 +18,7 @@ def filter(url):
             avg += d[word]
         count += 1
     
-    print("Score: " + str(avg / count))
+    # print("Score: " + str(avg / count))
 
     return (article.title, avg/count, url)
 
